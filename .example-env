@@ -1,0 +1,4 @@
+hostuser=<username>
+password=<password>
+cluster=<cluster>
+db=<database_name>
