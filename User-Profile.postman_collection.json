@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "f37d7bff-61d0-46b9-8a93-ae7d475283e8",
+		"name": "User-Profile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17221962"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "meet@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "demo@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "meet",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "meet@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "demo@123",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "03-08-2000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "userDetail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZTk1YmI3NGNhMjczNDJjYzRlYjZiYSIsImlhdCI6MTY1OTQ2MTUyNSwiZXhwIjoxNjU5NTQ3OTI1fQ.hq1_lNf1wn50SHC8SAPBF7z3LgIzQarvkbJAm3GD6DA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
